@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>胡昌泰回忆录 — 勤学苦干是我家的传家宝（日式极简风）</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+
+  :root {
+    --bg: #f7f7f5;
+    --white: #ffffff;
+    --text: #333;
+    --text-light: #666;
+    --text-muted: #999;
+    --accent: #c0392b;
+    --accent-light: #fdf0ef;
+    --green: #4a8c6f;
+    --green-light: #f0f7f4;
+    --gold: #b8860b;
+    --gold-light: #fdf8ef;
+    --border: #e8e8e6;
+    --shadow: 0 1px 4px rgba(0,0,0,0.04);
+    --radius: 6px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: "Noto Serif SC", "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 2.1;
+    font-size: 15.5px;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 24px;
+    background: var(--white);
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--border), transparent);
+  }
+  .hero h1 {
+    font-size: clamp(2.4em, 6vw, 3.8em);
+    font-weight: 300;
+    letter-spacing: 0.6em;
+    color: var(--text);
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.3s;
+  }
+  .hero .subtitle {
+    font-size: 0.95em;
+    color: var(--text-muted);
+    letter-spacing: 0.4em;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.6s;
+  }
+  .hero .meta {
+    margin-top: 50px;
+    font-size: 0.78em;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.9s;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== NAV ===== */
+  .nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav a {
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.8em;
+    letter-spacing: 0.15em;
+    font-weight: 400;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+  }
+  .nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* ===== LAYOUT ===== */
+  .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 100px 0; border-bottom: 1px solid var(--border); }
+
+  /* ===== SECTION TITLE ===== */
+  .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .section-title h2 {
+    font-size: clamp(1.3em, 3vw, 1.7em);
+    color: var(--text);
+    letter-spacing: 0.3em;
+    font-weight: 300;
+    margin-bottom: 12px;
+  }
+  .section-title .en {
+    font-size: 0.7em;
+    color: var(--text-muted);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  .section-title .dot {
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin: 16px auto 0;
+  }
+
+  /* ===== QUOTE ===== */
+  .quote-box {
+    background: var(--gold-light);
+    padding: 28px 32px;
+    margin: 32px 0;
+    border-radius: var(--radius);
+    font-size: 1em;
+    color: #5d4e37;
+    line-height: 2.2;
+    position: relative;
+  }
+  .quote-box::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 3px;
+    height: calc(100% - 32px);
+    background: var(--gold);
+    border-radius: 3px;
+  }
+
+  /* ===== STATS ===== */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 40px 0;
+  }
+  .stat-card {
+    text-align: center;
+    padding: 36px 16px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .stat-card .num { font-size: 2.2em; font-weight: 700; color: var(--accent); letter-spacing: -0.02em; }
+  .stat-card .label { font-size: 0.75em; color: var(--text-muted); margin-top: 6px; letter-spacing: 0.1em; }
+
+  /* ===== CARD ===== */
+  .card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 40px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow);
+  }
+  .card h3 {
+    color: var(--text);
+    font-size: 1.2em;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+  .card h4 {
+    color: var(--accent);
+    font-size: 0.95em;
+    margin: 28px 0 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .card p { margin-bottom: 14px; text-align: justify; font-weight: 300; }
+  .card ul { margin: 12px 0 12px 20px; }
+  .card li { margin-bottom: 8px; font-weight: 300; }
+
+  /* ===== FIRST PERSON ===== */
+  .first-person {
+    background: #fafafa;
+    border-left: 2px solid var(--text-muted);
+    padding: 24px 28px;
+    margin: 20px 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic;
+    color: var(--text-light);
+    font-weight: 300;
+  }
+  .first-person p { color: var(--text-light); }
+
+  /* ===== GAP NOTICE ===== */
+  .gap-notice {
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    margin: 18px 0;
+    font-size: 0.88em;
+    color: #92400e;
+  }
+  .gap-notice strong { color: var(--accent); }
+
+  /* ===== HONOR ===== */
+  .honor-card {
+    background: var(--accent-light);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 14px 0;
+  }
+  .honor-card h4 { color: var(--accent); margin: 0 0 6px; font-size: 0.9em; }
+  .honor-card p { margin: 0; font-weight: 400; }
+
+  /* ===== TIMELINE ===== */
+  .timeline { position: relative; padding: 20px 0; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+  .tl-item {
+    position: relative;
+    padding-left: 56px;
+    margin-bottom: 28px;
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: slideIn 0.5s ease forwards;
+  }
+  .tl-item:nth-child(1) { animation-delay: 0.1s; }
+  .tl-item:nth-child(2) { animation-delay: 0.15s; }
+  .tl-item:nth-child(3) { animation-delay: 0.2s; }
+  .tl-item:nth-child(4) { animation-delay: 0.25s; }
+  .tl-item:nth-child(5) { animation-delay: 0.3s; }
+  .tl-item:nth-child(6) { animation-delay: 0.35s; }
+  .tl-item:nth-child(7) { animation-delay: 0.4s; }
+  .tl-item:nth-child(8) { animation-delay: 0.45s; }
+  .tl-item:nth-child(9) { animation-delay: 0.5s; }
+  .tl-item:nth-child(10) { animation-delay: 0.55s; }
+  .tl-item:nth-child(n+11) { animation-delay: 0.6s; }
+  @keyframes slideIn { to { opacity: 1; transform: translateX(0); } }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    width: 13px;
+    height: 13px;
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+  .tl-item.highlight::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-light); }
+  .tl-year { font-weight: 600; color: var(--text); font-size: 0.9em; }
+  .tl-age { color: var(--text-muted); font-size: 0.76em; margin-left: 8px; }
+  .tl-desc { margin-top: 4px; color: var(--text-light); font-size: 0.88em; font-weight: 300; }
+  .tl-tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.7em;
+    margin-left: 6px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  .tl-tag { background: #f3f4f6; color: #6b7280; }
+  .tl-tag.red { background: var(--accent-light); color: var(--accent); }
+  .tl-tag.gold { background: var(--gold-light); color: var(--gold); }
+  .tl-tag.green { background: var(--green-light); color: var(--green); }
+
+  /* ===== BOOKS ===== */
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 28px;
+  }
+  .book-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .book-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .book-card img { width: 100%; height: 280px; object-fit: cover; display: block; }
+  .book-card .info { padding: 18px 20px; }
+  .book-card .info h4 { color: var(--text); font-size: 0.95em; margin-bottom: 6px; font-weight: 600; }
+  .book-card .info p { color: var(--text-muted); font-size: 0.8em; line-height: 1.7; margin: 0; font-weight: 300; }
+
+  /* ===== GALLERY ===== */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .gallery-grid img {
+    width: 100%; height: 200px; object-fit: cover;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    display: block;
+  }
+  .gallery-grid img:hover { transform: scale(1.03); opacity: 0.9; }
+
+  /* ===== NEWSPAPER ===== */
+  .newspaper-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: 24px 0;
+  }
+  .newspaper-card img { width: 100%; max-height: 420px; object-fit: contain; background: #f5f5f5; display: block; }
+  .newspaper-card .caption { padding: 18px 24px; color: var(--text-muted); font-size: 0.85em; font-weight: 300; }
+
+  /* ===== LINKS ===== */
+  .link-list { list-style: none; }
+  .link-list li { padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .link-list li:last-child { border-bottom: none; }
+  .link-list strong { color: var(--text); font-size: 0.88em; font-weight: 600; }
+  .link-list a { color: var(--accent); text-decoration: none; word-break: break-all; font-size: 0.8em; }
+  .link-list a:hover { text-decoration: underline; }
+
+  /* ===== TODO ===== */
+  .todo-section {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  .todo-section h3 { color: var(--text); font-size: 1em; margin-bottom: 14px; font-weight: 600; }
+  .todo-list { list-style: none; }
+  .todo-list li { padding: 8px 12px; border-bottom: 1px solid #f5f5f5; display: flex; align-items: flex-start; gap: 10px; font-size: 0.88em; font-weight: 300; }
+  .todo-list li:last-child { border-bottom: none; }
+  .icon-done { color: var(--green); flex-shrink: 0; }
+  .icon-pending { color: #ddd; flex-shrink: 0; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center;
+    padding: 80px 24px;
+    color: var(--text-muted);
+    font-size: 0.8em;
+    background: var(--white);
+    letter-spacing: 0.15em;
+  }
+  footer .heart { color: var(--accent); }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.92); z-index: 999; justify-content: center; align-items: center; cursor: pointer; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 92%; max-height: 92%; border-radius: 4px; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    body { font-size: 14.5px; }
+    .hero { min-height: 50vh; padding: 60px 20px; }
+    section { padding: 60px 0; }
+    .card { padding: 28px 22px; }
+    .books-grid { grid-template-columns: 1fr 1fr; }
+    .book-card img { height: 200px; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .nav a { padding: 12px 10px; font-size: 0.75em; }
+    .stats-row { gap: 12px; }
+  }
+  @media (max-width: 480px) {
+    .books-grid { grid-template-columns: 1fr; }
+    .stats-row { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .stat-card { padding: 20px 8px; }
+    .stat-card .num { font-size: 1.6em; }
+  }
+  @media print { .nav { display: none; } section { page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>胡昌泰</h1>
+  <div class="subtitle">勤学苦干是我家的传家宝</div>
+  <div class="meta">周吟、祝捷整理 · 2026 年 6 月</div>
+</div>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="#overview">概览</a><a href="#timeline">时间线</a><a href="#chapters">回忆录</a><a href="#books">著作</a><a href="#impact">影响</a><a href="#family">家人</a><a href="#motto">家风</a><a href="#links">资料</a><a href="#todo">待补</a>
+</div></nav>
+
+<!-- OVERVIEW -->
+<section id="overview"><div class="container">
+  <div class="section-title"><h2>人物概览</h2><div class="en">Overview</div><div class="dot"></div></div>
+  <div class="quote-box">"我叫胡昌泰，1944 年 4 月 17 日出生于湖北黄冈。一辈子扎根咸宁，深耕党史研究与地方文史工作，始终信奉'勤学苦干，不负时光'。"</div>
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">44</div><div class="label">年工作生涯</div></div>
+    <div class="stat-card"><div class="num">10+</div><div class="label">部主编/参编著作</div></div>
+    <div class="stat-card"><div class="num">~118万</div><div class="label">字编纂总量</div></div>
+  </div>
+  <div class="card">
+    <p>胡昌泰，1944 年 4 月 17 日出生于湖北黄冈，1960 年参加工作。历任阳新综合农场文秘、阳新县委宣传部干事、咸宁报社编辑记者（15 年）、<strong>咸宁地委政研室副主任</strong>、<strong>咸宁市委党史研究室主任</strong>（正县级调研员）。2004 年 6 月正式退休。</p>
+    <p>他是咸宁本土党史研究领域的领军人物，2001 年获评<strong>全省党史系统先进个人</strong>，所在单位被评为<strong>全省先进单位</strong>。退休后仍"离岗不离心、退休不褪色"，被市委聘为党史专家，持续参与评审、宣讲，并受邀在军分区主持编撰《咸宁市兵要地志》。</p>
+  </div>
+</div></section>
+
+<!-- TIMELINE -->
+<section id="timeline"><div class="container">
+  <div class="section-title"><h2>一张时间地图</h2><div class="en">Life Timeline</div><div class="dot"></div></div>
+  <div class="timeline">
+    <div class="tl-item highlight"><span class="tl-year">1944.4.17</span><span class="tl-age">出生</span><div class="tl-desc">生于湖北黄冈 <span class="tl-tag">起点</span></div></div>
+    <div class="tl-item"><span class="tl-year">— 1960</span><span class="tl-age">0–16 岁</span><div class="tl-desc">在黄冈成长，就读黄冈一中（学生会副主席、宣传部长），后改入黄冈师范学校</div></div>
+    <div class="tl-item highlight"><span class="tl-year">1960.12.20</span><span class="tl-age">16 岁</span><div class="tl-desc">到阳新综合农场参加工作（工龄起算日） <span class="tl-tag gold">人生起点</span></div></div>
+    <div class="tl-item"><span class="tl-year">1960.12–1961.3</span><span class="tl-age">16–17 岁</span><div class="tl-desc">在农场种田 3 个月</div></div>
+    <div class="tl-item highlight"><span class="tl-year">1961</span><span class="tl-age">17 岁</span><div class="tl-desc">招干考试 20 取 5，年龄最小但因表达能力突出被录用 <span class="tl-tag red">转折</span></div></div>
+    <div class="tl-item"><span class="tl-year">1961–1970.6</span><span class="tl-age">17–26 岁</span><div class="tl-desc">农场文秘→办公室；文革期间宣传报道一年，做成阳新先进单位</div></div>
+    <div class="tl-item"><span class="tl-year">1970.6</span><span class="tl-age">26 岁</span><div class="tl-desc">调阳新县委宣传部（11 个月）</div></div>
+    <div class="tl-item highlight"><span class="tl-year">1971.6</span><span class="tl-age">27 岁</span><div class="tl-desc">正式到咸宁报社工作——报社扩招，点名调入 <span class="tl-tag">报人起点</span></div></div>
+    <div class="tl-item"><span class="tl-year">1971.6–1986</span><span class="tl-age">27–42 岁</span><div class="tl-desc">咸宁报社编辑记者 15 年</div></div>
+    <div class="tl-item"><span class="tl-year">1983–1985</span><span class="tl-age">39–41 岁</span><div class="tl-desc">在职读电大党政干部班，获汉语言文学大专文凭 <span class="tl-tag gold">边工作边读书</span></div></div>
+    <div class="tl-item highlight"><span class="tl-year">1986</span><span class="tl-age">42 岁</span><div class="tl-desc">调至咸宁地委政研室 <span class="tl-tag green">新阶段</span></div></div>
+    <div class="tl-item"><span class="tl-year">1986–1990</span><span class="tl-age">42–46 岁</span><div class="tl-desc">地委政研室副科长→科长</div></div>
+    <div class="tl-item"><span class="tl-year">1990–1996</span><span class="tl-age">46–52 岁</span><div class="tl-desc">地委政研室副主任，最后一年半主持日常工作</div></div>
+    <div class="tl-item highlight"><span class="tl-year">1996.6</span><span class="tl-age">52 岁</span><div class="tl-desc">改任党史办主任（后改党史研究室） <span class="tl-tag red">党史事业起点</span></div></div>
+    <div class="tl-item"><span class="tl-year">1999</span><span class="tl-age">55 岁</span><div class="tl-desc">主编《中国共产党鄂南历史》出版，约 35 万字 <span class="tl-tag gold">里程碑</span></div></div>
+    <div class="tl-item highlight"><span class="tl-year">2001</span><span class="tl-age">57 岁</span><div class="tl-desc">获评<strong>全省党史系统先进个人</strong>；单位获<strong>全省先进单位</strong> <span class="tl-tag red">荣誉</span></div></div>
+    <div class="tl-item"><span class="tl-year">2001</span><span class="tl-age">57 岁</span><div class="tl-desc">主编《中共咸宁简史》出版</div></div>
+    <div class="tl-item"><span class="tl-year">2002–2004.6</span><span class="tl-age">58–60 岁</span><div class="tl-desc">正县级调研员，仍主持党史研究室工作</div></div>
+    <div class="tl-item highlight"><span class="tl-year">2004.6</span><span class="tl-age">60 岁</span><div class="tl-desc">正式退休；被市委聘为咸宁市党史专家 <span class="tl-tag green">退休</span></div></div>
+    <div class="tl-item"><span class="tl-year">2013</span><span class="tl-age">69 岁</span><div class="tl-desc">主笔《中国共产党咸宁历史》第二卷（1949–1978），约 33 万字</div></div>
+    <div class="tl-item"><span class="tl-year">2015</span><span class="tl-age">71 岁</span><div class="tl-desc">改造编撰第一卷（1921–1949）；走进鄂高开展红色宣讲</div></div>
+    <div class="tl-item"><span class="tl-year">2015–2018</span><span class="tl-age">71–74 岁</span><div class="tl-desc">受邀在军分区主持编撰《咸宁市兵要地志》，约 50 万字 <span class="tl-tag gold">退休代表作</span></div></div>
+  </div>
+</div></section>
+
+<!-- CHAPTERS -->
+<section id="chapters"><div class="container">
+  <div class="section-title"><h2>回忆录</h2><div class="en">Memoir Chapters</div><div class="dot"></div></div>
+  <div class="card"><h3>第一章 · 少年时代的转折（1944–1960）</h3><h4>自述：放弃高中，改读师范</h4>
+    <div class="first-person"><p>我原本放弃了就读黄冈高中的机会，改读黄冈师范学校，准备一年后出来当小学老师。那时候想法很简单——早点工作，早点分担家里的负担。</p><p>但人生常常有意外的转折。父亲当时在阳新综合农场生产队任支部书记，赶上了一个政策：农场支部书记以上的干部，家属可以迁来，初中毕业以上的子女可以参加农场的招干考试。父亲来信问我要不要试试。</p><p>我决定试一试。先是初选，20 人参加考试，最后录取 5 人。我是那 20 人里年龄最小的，但因为在黄冈一中读书时当过学生会副主席、宣传部长，表达能力还可以，面试时被录用了。</p></div>
+    <div class="gap-notice"><strong>⚠️ 待补：</strong> 黄冈老家具体位置、太爷爷太奶奶姓名生平、兄弟姐妹情况、1944 年时局背景、童年最深记忆、黄冈一中具体故事。</div>
+  </div>
+  <div class="card"><h3>第二章 · 从农场起步（1960–1970）</h3>
+    <div class="first-person"><p>1960 年 12 月 20 日，我正式到阳新综合农场报到，这一天开始计算我的工龄。刚去的时候，先种了 3 个月的田。</p><p>后来通过招干考试，我留在了农场。从 1960 年到 1970 年 6 月，我在农场整整工作了十年。主要做文秘工作，后来调到办公室。文化大革命时期，上面很重视宣传报道，组织上安排我在农场负责宣传报道，大概干了一年，把农场的宣传报道工作做成了阳新县的先进单位。</p></div>
+    <div class="gap-notice"><strong>⚠️ 待补：</strong> 农场具体位置规模、种田三个月的真实感受、文秘工作具体内容、文革期间详细状态、感情生活/婚姻。</div>
+  </div>
+  <div class="card"><h3>第三章 · 报人岁月（1970–1986）</h3>
+    <div class="first-person"><p>1970 年 6 月，我调到阳新县委宣传部，工作了 11 个月。正好赶上咸宁报社扩招，点名要调我去当编辑记者。1971 年 5 月定下来，6 月我就到了报社，一直干到 1986 年。</p><p>在报社工作期间，我读了电大的党政干部班（1983–1985 年），没有脱产，拿了大专文凭，学的是汉语言文学专业。</p></div>
+    <div class="gap-notice"><strong>⚠️ 待补：</strong> 报社全称与隶属、岗位与职务变动、印象最深的采访报道、1976 年前后变化、同事师友、家庭搬迁与子女成长。</div>
+  </div>
+  <div class="card"><h3>第四章 · 政研与党史（1986–2004）</h3><h4>地委政研室十年（1986–1996）</h4>
+    <div class="first-person"><p>1986 年，我调到地委政研室。先当副科长，第二年当科长，四年后当副主任，五年后其中有一年半的时间主持地委政研室的日常工作。</p></div>
+    <p>在政策研究与文稿撰写岗位上积累了十年扎实经验，从记录当下转向更深入的思考与谋划。</p>
+    <h4>党史研究室主任（1996.6–2004.6）</h4>
+    <div class="first-person"><p>1996 年 6 月，我改任党史办主任（这个单位后来改为党史研究室）。在党史办工作期间，2001 年我被评为全省党史系统先进个人，我们单位也被评为全省先进单位。后面两年我改任正县级调研员，但仍然主持工作。</p><p>2004 年 6 月，我正式退休。</p></div>
+    <h4>主导编纂的核心党史著作</h4>
+    <p>牵头编纂了咸宁党史的"正本"系列，均获<strong>咸宁市社科类著作二等奖</strong>：</p>
+    <p>• 《中国共产党鄂南历史》（1999）—— 约 35 万字<br>• 《中共咸宁简史》（2001）—— 后改造扩展为第一卷<br>• 《中国共产党咸宁历史》第二卷（2013）—— 约 33 万字，主笔第一、二、五编<br>• 《中国共产党咸宁历史》第一卷（2015）—— 原著主编并参与修订</p>
+    <h4>荣誉</h4>
+    <div class="honor-card"><h4>个人荣誉</h4><p>2001 年，被评为<strong>全省党史系统先进个人</strong></p></div>
+    <div class="honor-card"><h4>集体荣誉</h4><p>所在单位党史研究室被评为<strong>全省先进单位</strong></p></div>
+  </div>
+  <div class="card"><h3>第五章 · 退休不褪色（2004 至今）</h3>
+    <div class="quote-box">"离岗不离心、退休不褪色。"</div>
+    <p>退休之后，被市委聘为咸宁市党史专家，多次参与评审。继续深度参与：</p>
+    <ul><li><strong>党史评审</strong>：担任《中国共产党咸宁历史》第三卷（2002–2012）核心评审专家</li><li><strong>重阳座谈会</strong>：参与史志研究中心离退休干部座谈与建言</li><li><strong>红色宣讲</strong>：走进鄂高、中小学开展"老干部讲好中国故事"报告会</li><li><strong>接受采访</strong>：持续关注鄂南秋收暴动等重点课题</li></ul>
+    <h4>《咸宁市兵要地志》编书过程（2015–2018）</h4>
+    <div class="first-person"><p>因为我先后在多个单位工作过，经验比较丰富，又亲自执笔写过这么多材料、了解这么多情况，退休后军分区邀请我参与著书。</p><p>编书的过程是这样的：主要是我手写，军分区有人帮忙打字；军分区提供原始资料；我去采访在职和退役的老兵，包括军分区档案负责人；同时还辅导各人武部做简易小册子。</p></div>
+    <p>《咸宁市兵要地志》（截止 2015 年），约 50 万字，2018 年内部非公开出版，副主编。</p>
+  </div>
+  <div class="card"><h3>第六章 · 完整著作与评审清单</h3><h4>一、核心主编 / 牵头编纂</h4>
+    <p>1. 《中国共产党鄂南历史》（1999，约 35 万字）<br>2. 《中共咸宁简史》（2001）<br>3. 《中国共产党咸宁历史》第一卷（2015，1921–1949）<br>4. 《中国共产党咸宁历史》第二卷（2013，1949–1978，约 33 万字）<br>5. 《咸宁市兵要地志》（2018，约 50 万字，内部刊物）—— 副主编</p>
+    <h4>二、据网络资料补充的参与编纂 / 评审作品</h4>
+    <p>6. 《咸宁党史大事记》（多辑）—— 主导整理<br>7. 《鄂南英烈传》（续编、修订版）—— 牵头修订<br>8. 《鄂南党史大事、革命烈士简介》—— 统筹编审<br>9. 咸宁抗战人口伤亡与财产损失史料汇编 —— 主导调研<br>10. 《中国共产党咸宁历史》第三卷（2002–2012）—— 核心评审专家<br>11. 《鄂南秋收暴动》—— 评审<br>12. 《鄂南建立全国第一个县级红色政权研究》—— 深度参与<br>13. 《中国共产党湖北省咸宁地区组织史资料（1925–1987）》—— 参编</p>
+    <div class="gap-notice"><strong>⚠️ 说明：</strong>以上第 6–13 条来自网络公开资料，部分可能为集体成果，需与外公确认其具体参与角色与程度。</div>
+  </div>
+</div></section>
+
+<!-- BOOKS -->
+<section id="books"><div class="container">
+  <div class="section-title"><h2>主要著作</h2><div class="en">Published Works</div><div class="dot"></div></div>
+  <p style="text-align:center; color:var(--text-muted); margin-bottom:16px; font-size:0.85em; letter-spacing:0.1em;">核心著作均获咸宁市社科类著作二等奖</p>
+  <div class="books-grid">
+    <div class="book-card"><img src="images/微信图片_20260502214844_1516_49.jpg" alt="" onclick="openLightbox(this)"><div class="info"><h4>《中国共产党鄂南历史》</h4><p>1999 · 约 35 万字<br>主编：程光亮、胡昌泰<br>中共党史出版社</p></div></div>
+    <div class="book-card"><img src="images/微信图片_20260502214849_1518_49.jpg" alt="" onclick="openLightbox(this)"><div class="info"><h4>《中共咸宁简史》</h4><p>2001<br>中共咸宁市委党史研究室 著<br>湖北地方简史丛书</p></div></div>
+    <div class="book-card"><img src="images/微信图片_20260502214851_1520_49.jpg" alt="" onclick="openLightbox(this)"><div class="info"><h4>《中国共产党咸宁历史》第一卷</h4><p>2015 · 1921–1949<br>原著主编：程光亮、胡昌泰</p></div></div>
+    <div class="book-card"><img src="images/微信图片_20260502214855_1523_49.jpg" alt="" onclick="openLightbox(this)"><div class="info"><h4>《中国共产党咸宁历史》第二卷</h4><p>2013 · 1949–1978 · 约 33 万字<br>主笔第一、二、五编</p></div></div>
+    <div class="book-card"><img src="images/微信图片_20260502214858_1525_49.jpg" alt="" onclick="openLightbox(this)"><div class="info"><h4>《咸宁市兵要地志》</h4><p>2018 · 约 50 万字<br>副主编：胡昌泰<br>内部刊物（机密）</p></div></div>
+  </div>
+  <h3 style="color:var(--text); margin-top:48px; margin-bottom:16px; text-align:center; font-size:1em; letter-spacing:0.15em; font-weight:300;">书籍内页与版权信息</h3>
+  <div class="gallery-grid">
+    <img src="images/微信图片_20260502214847_1517_49.jpg" alt="" onclick="openLightbox(this)">
+    <img src="images/微信图片_20260502214850_1519_49.jpg" alt="" onclick="openLightbox(this)">
+    <img src="images/微信图片_20260502214853_1521_49.jpg" alt="" onclick="openLightbox(this)">
+    <img src="images/微信图片_20260502214854_1522_49.jpg" alt="" onclick="openLightbox(this)">
+    <img src="images/微信图片_20260502214856_1524_49.jpg" alt="" onclick="openLightbox(this)">
+    <img src="images/微信图片_20260502214859_1526_49.jpg" alt="" onclick="openLightbox(this)">
+    <img src="images/微信图片_20260502214900_1527_49.jpg" alt="" onclick="openLightbox(this)">
+  </div>
+</div></section>
+
+<!-- IMPACT -->
+<section id="impact"><div class="container">
+  <div class="section-title"><h2>社会影响</h2><div class="en">Social Impact</div><div class="dot"></div></div>
+  <div class="card"><h3>红色宣讲：走进鄂南高中</h3><p>2015 年国庆前夕，咸宁市教育局、团市委、市老干办、鄂南高中联合举办"老干部讲好中国故事"报告会。胡昌泰为师生作地方革命史报告，涵盖汀泗桥战役、湘鄂赣革命根据地创建等重大事件，讲述曾洪勇、徐大成、姚山、杨瑞等英雄事迹。</p></div>
+  <div class="newspaper-card"><img src="images/鄂高.png" alt="" onclick="openLightbox(this)"><div class="caption"><strong>报纸报道：</strong>"'老干部讲好中国故事'报告会走进鄂高"——继承优良革命传统，弘扬爱国主义精神。</div></div>
+  <div class="card" style="margin-top:24px;"><h3>行业评价</h3><div class="quote-box">作为咸宁本土党史研究领域的领军人物，胡昌泰见证并推动了咸宁党史事业数十年的发展。他是鄂南红色文化挖掘、传承、弘扬的重要推动者；其研究成果与宣讲工作，为咸宁红色文化保护、党史教育普及奠定了重要基础。</div><p><strong>核心研究方向：</strong>鄂南秋收暴动 · 汀泗桥/贺胜桥北伐战役 · 湘鄂赣革命根据地 · 鄂南抗日战争 · 咸宁红色政权 · "全国首个县级红色政权诞生地"史实考证</p></div>
+</div></section>
+
+<!-- FAMILY -->
+<section id="family"><div class="container">
+  <div class="section-title"><h2>家人</h2><div class="en">Family</div><div class="dot"></div></div>
+  <div class="card"><h3>家庭信息</h3><div class="gap-notice"><strong>⚠️ 本章节待补充：</strong> 外婆（家家）的姓名、籍贯、工作履历；与外公的相识结婚经过；子女信息（姓名/出生年份/排行）；对孙辈最想说的话；一生的师友。目前仅从口述中得知少量线索，需要进一步采访整理。</div></div>
+</div></section>
+
+<!-- MOTTO -->
+<section id="motto"><div class="container">
+  <div class="section-title"><h2>家风 · 勤学苦干</h2><div class="en">Family Legacy</div><div class="dot"></div></div>
+  <div class="card"><h3>写给后人的话</h3>
+    <div class="quote-box" style="font-size:1.05em;">"希望你们把勤学苦干的家风代代传承下去，这是我们家的传家宝。<br>勤学苦干就能创造财富，为社会创造财富，也为你自己创造财富。<br>就像习总书记说的：幸福生活是干出来的。"</div>
+    <div class="first-person"><p>不管是读书阶段的勤学，还是工作阶段的苦干，都是靠一字一句的积累。你和祝捷读研究生，但工作中还是要继续努力。爸爸为了工作经常牺牲休息的时间。小姨先进老师。家家工作的时候吃力，缺少文化，但肯学习，认真地练字。</p><p>我希望后辈们记住：勤学和苦干，是我们家代代相传的财富。</p></div>
+  </div>
+  <div class="card"><h3>一生的注脚</h3>
+    <div class="first-person"><p>回顾我这一生，从农场起步，历经宣传、新闻、政策研究、党史、军史编纂，岗位在变，但"用笔和思考工作"的底色没变。我始终相信，幸福生活是干出来的，精神财富是勤学苦思积累起来的。我年轻时放弃了更安逸的选择，工作后也常牺牲休息时间用于学习和写作，不是为了别的，只是觉得，人总要为社会、为后人留下点有价值的东西。这是我的"传家宝"——"勤学苦干"，希望你们，以及你们的后辈，能将这份精神接过去。无论读书还是工作，都要靠"一字一句的积累"，一步一个脚印地去创造属于自己的、也能惠及社会的价值。</p></div>
+  </div>
+</div></section>
+
+<!-- LINKS -->
+<section id="links"><div class="container">
+  <div class="section-title"><h2>网络资料</h2><div class="en">Online References</div><div class="dot"></div></div>
+  <div class="card"><ul class="link-list">
+    <li><strong>咸宁史志中心 — 第三卷专家评审会</strong><br><a href="http://www.hbdsw.org.cn/gzjx/sxzc/xns/202310/t4653780_mob.shtml" target="_blank">http://www.hbdsw.org.cn/gzjx/sxzc/xns/202310/t4653780_mob.shtml</a></li>
+    <li><strong>咸宁史志中心 — 2019 年慰问退休干部胡昌泰</strong><br><a href="http://szyj.xnnews.com.cn/ztzl/jgdj/201909/t20190910_1822186.shtml" target="_blank">http://szyj.xnnews.com.cn/ztzl/jgdj/201909/t20190910_1822186.shtml</a></li>
+    <li><strong>咸宁新闻网 — 2015 年走进鄂高讲革命故事</strong><br><a href="http://m.toutiao.com/group/6203467985716691201/" target="_blank">http://m.toutiao.com/group/6203467985716691201/</a></li>
+    <li><strong>咸宁市退役军人事务局 — 2021 年点评《党史上的咸宁记忆》</strong><br><a href="http://dva.xianning.gov.cn/ztzl/dsxxjy/202107/t20210714_2358357.shtml" target="_blank">http://dva.xianning.gov.cn/ztzl/dsxxjy/202107/t20210714_2358357.shtml</a></li>
+    <li><strong>掌桥科研 — 胡昌泰《新四军的成长之路》论文</strong><br><a href="https://www.zhangqiaokeyan.com/academic-journal-cn_party-history-earth_thesis/020124063069.html" target="_blank">https://www.zhangqiaokeyan.com/academic-journal-cn_party-history-earth_thesis/020124063069.html</a></li>
+    <li><strong>报纸原版 PDF — "老干部讲好中国故事"报告会走进鄂高</strong><br><a href="http://szb.xnnews.com.cn/newb/misc/2/2015-10/09/02/2015100902_pdf.pdf" target="_blank">http://szb.xnnews.com.cn/newb/misc/2/2015-10/09/02/2015100902_pdf.pdf</a></li>
+  </ul></div>
+</div></section>
+
+<!-- TODO -->
+<section id="todo"><div class="container">
+  <div class="section-title"><h2>待补清单</h2><div class="en">What's Still Missing</div><div class="dot"></div></div>
+  <div class="todo-section"><h3>🅐 优先补充：家庭与家族</h3><ul class="todo-list"><li><span class="icon-pending">○</span> 黄冈老家具体位置（乡镇/村庄）、老屋是否还在</li><li><span class="icon-pending">○</span> 太爷爷太奶奶（外公的父母）的姓名、生卒、谋生方式</li><li><span class="icon-pending">○</span> 兄弟姐妹的姓名、排行、各自去向</li><li><span class="icon-pending">○</span> 外婆的姓名、籍贯、与外公怎么认识、哪年结婚</li><li><span class="icon-pending">○</span> 子女（包括我妈/舅/姨）出生的具体年份与排行</li></ul></div>
+  <div class="todo-section"><h3>🅑 丰富细节</h3><ul class="todo-list"><li><span class="icon-pending">○</span> 黄冈一中/师范的具体故事、童年记忆</li><li><span class="icon-pending">○</span> 农场十年的故事（种田感受、宣传报道细节、文革状态）</li><li><span class="icon-pending">○</span> 报社 15 年的采访/报道故事、1976 年前后变化</li><li><span class="icon-pending">○</span> 编书背后的故事（史料征集、采访老同志、最难的章节）</li><li><span class="icon-pending">○</span> 网络资料中第 6–13 号著作的具体参与程度确认</li></ul></div>
+  <div class="todo-section"><h3>📷 尚需收集的实物</h3><ul class="todo-list"><li><span class="icon-pending">○</span> 少年/农场/报社时期老照片</li><li><span class="icon-pending">○</span> 报社时期代表性报道剪报</li><li><span class="icon-pending">○</span> 荣誉证书/奖状/聘书</li><li><span class="icon-pending">○</span> 编书手稿、采访笔记</li><li><span class="icon-pending">○</span> 家庭老照片（外婆、子女幼年）</li><li><span class="icon-pending">○</span> 任职文件/调动通知</li></ul></div>
+</div></section>
+
+<footer><p>整理人：周吟、祝捷 · 2026 年 6 月</p><p style="margin-top:8px;">传家宝：<strong>勤学苦干</strong> <span class="heart">♥</span></p></footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src="" alt=""></div>
+<script>
+function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
+</script>
+</body>
+</html>
